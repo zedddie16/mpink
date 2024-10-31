@@ -9,10 +9,14 @@ local colors = {
 	contrast = "#70606a",
 }
 local function set_highlights()
-	vim.api.nvim_set_hl(0, "Normal", { fg = colors.pink, bg = colors.background })
-	vim.api.nvim_set_hl(0, "Comment", { fg = colors.gray, italic = true })
-	vim.api.nvim_set_hl(0, "Function", { fg = colors.pink, bold = false, bg = colors.pink })
-	vim.api.nvim_set_hl(0, "Keyword", { fg = colors.darker_pink, italic = true })
+	vim.api.nvim_set_hl(0, "Normal", { fg = colors.text, bg = colors.background })
+	vim.api.nvim_set_hl(0, "Comment", { fg = colors.gray, italic = true, bold = true })
+	vim.api.nvim_set_hl(0, "Function", { fg = colors.pink, bold = true })
+	vim.api.nvim_set_hl(0, "Keyword", { fg = colors.darker_pink, bold = true })
+	vim.api.nvim_set_hl(0, "String", { fg = colors.light_pink })
+	vim.api.nvim_set_hl(0, "Identifier", { fg = colors.pink })
+	vim.api.nvim_set_hl(0, "Statement", { fg = colors.darker_pink })
+	vim.api.nvim_set_hl(0, "Type", { fg = colors.light_pink, bold = true })
 end
 
 function mpink.setup()

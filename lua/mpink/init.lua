@@ -1,3 +1,5 @@
+local mpink = {}
+
 local colors = {
 	background = "#131313",
 	pink = "#f7c4d9",
@@ -13,10 +15,8 @@ local function set_highlights()
 	vim.api.nvim_set_hl(0, "Keyword", { fg = colors.darker_pink, italic = true })
 end
 
-local M = {}
-
-function M.setup()
+function mpink.setup()
 	set_highlights()
 end
 
-return M
+return mpink

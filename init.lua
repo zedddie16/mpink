@@ -1,0 +1,1 @@
+require("mpink").setup()
